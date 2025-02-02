@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.054   0 0 0 0 0.647   0 0 0 0 0.914  0 0 0 1 0" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <path d="M256 64C150.4 64 64 150.4 64 256C64 361.6 150.4 448 256 448C361.6 448 448 361.6 448 256C448 150.4 361.6 64 256 64ZM256 384C185.6 384 128 326.4 128 256C128 185.6 185.6 128 256 128C326.4 128 384 185.6 384 256C384 326.4 326.4 384 256 384Z" fill="#0EA5E9" filter="url(#neon-glow)"/>
+</svg>

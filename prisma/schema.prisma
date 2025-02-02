@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URI")
+}
+
+model Image {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  symbol      String
+  description String
+  prompt      String
+  imageUrl    String
+  downloadUrl String
+  createdAt   DateTime @default(now())
+
+  @@map("art_images")
+}
